@@ -52,4 +52,5 @@ print(f"\nVe slozce původniho PDF byl vytvoren soubor se slidy.\nPozor! Nové P
 
 os.system("echo K zavreni prikazove radky stisknete enter")
 os.system("pause > nul")
+# os.system("exit 0")
 
