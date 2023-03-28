@@ -57,6 +57,8 @@ echo.
 pip install Pillow
 pip install pathlib
 pip install pdf2image
+pip install numpy
+pip install opencv-python
 echo _________________________________________________________________________________________________________________________
 echo     Moduly nainstalovany. Pokud nektery ne, doreste jeho instalaci dodatecne.
 echo     Nyni stisknete libovolnou klavesu.
@@ -84,27 +86,29 @@ set prikaz=%CestaPythonu% %CestaProgramu%
 
 echo echo off >RunProgram.bat
 echo cls >>RunProgram.bat
+echo color 2
+echo echo ..
 echo echo.    >>RunProgram.bat
 echo echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" >> RunProgram.bat
 echo echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" >> RunProgram.bat
 echo echo """                                                                                            """ >> RunProgram.bat 
-echo echo """         ______                _____ ___     __                                             """ >> RunProgram.bat
-echo echo """        / ____/________  ____ / ___// (_)___/ /__  _____                                    """ >> RunProgram.bat 
-echo echo """       / /   / ___/ __ \/ __ \\__ \/ / / __  / _ \/ ___/                                    """ >> RunProgram.bat
-echo echo """      / /___/ /  / /_/ / /_/ /__/ / / / /_/ /  __(__  )                                     """ >> RunProgram.bat 
-echo echo """      \____/_/   \____/ .___/____/_/_/\__,_/\___/____/                                      """ >> RunProgram.bat 
+echo echo """         ______                 _____ ___     __                                            """ >> RunProgram.bat
+echo echo """        / ____/________  ____  / ___// (_)___/ /__  _____                                   """ >> RunProgram.bat 
+echo echo """       / /   / ___/ __ \/ __ \ \__ \/ / / __  / _ \/ ___/                                   """ >> RunProgram.bat
+echo echo """      / /___/ /  / /_/ / /_/ /___/ / / / /_/ /  __(__  )                                    """ >> RunProgram.bat 
+echo echo """      \____/_/   \____/ .___/_____/_/_/\__,_/\___/____/                                     """ >> RunProgram.bat 
 echo echo """                     /_/                                                                    """ >> RunProgram.bat
-echo echo """                                                          @@@@@                             """ >> RunProgram.bat 
-echo echo """                                                         @@@@                               """ >> RunProgram.bat 
-echo echo """                                                        @@@.                                """ >> RunProgram.bat 
-echo echo """                                                      &@@@                                  """ >> RunProgram.bat 
-echo echo """                             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&                          """ >> RunProgram.bat 
-echo echo """                             ,@@@@@@@@@@@@@@@  _  @@@@@@@@@@@@@@@@                          """ >> RunProgram.bat 
-echo echo """                              @@@@@@@@@@@@@@@ |_| @@@@@@@@@@@@@@&                           """ >> RunProgram.bat 
-echo echo """                               &@@@@@@@@@@@@@ |\  @@@@@@@@@@@@@@                            """ >> RunProgram.bat 
-echo echo """                                @@@@@@@@@@@@@@@ \/ @@@@@@@@@@@@                             """ >> RunProgram.bat 
-echo echo """                                  @@@@@@@@@@@@@ /\ @@@@@@@@@@                               """ >> RunProgram.bat 
-echo echo """                                    &@@@@@@@@@@@@@@@@@@@@@(                                 """ >> RunProgram.bat 
+echo echo """                                                                      @@@@@                 """ >> RunProgram.bat 
+echo echo """                                                                     @@@@                   """ >> RunProgram.bat 
+echo echo """                                                                    @@@.                    """ >> RunProgram.bat 
+echo echo """                                                                  &@@@                      """ >> RunProgram.bat 
+echo echo """                                         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&              """ >> RunProgram.bat 
+echo echo """                                         ,@@@@@@@@@@@@@@@  _  @@@@@@@@@@@@@@@@              """ >> RunProgram.bat 
+echo echo """                                          @@@@@@@@@@@@@@@ |_| @@@@@@@@@@@@@@&               """ >> RunProgram.bat 
+echo echo """                                           &@@@@@@@@@@@@@ |\  @@@@@@@@@@@@@@                """ >> RunProgram.bat 
+echo echo """                                            @@@@@@@@@@@@@@@ \/ @@@@@@@@@@@@                 """ >> RunProgram.bat 
+echo echo """                                              @@@@@@@@@@@@@ /\ @@@@@@@@@@                   """ >> RunProgram.bat 
+echo echo """                                                &@@@@@@@@@@@@@@@@@@@@@(                     """ >> RunProgram.bat 
 echo echo """                                                                                          TS""" >> RunProgram.bat
 echo echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" >> RunProgram.bat
 echo echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" >> RunProgram.bat

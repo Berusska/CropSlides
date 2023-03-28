@@ -9,7 +9,7 @@ import OdhaleniHranic
 # cesta_pdfka = Path("C:\Users\Admin\Desktop\CropMasteikova\Ocni_terapeuticke_systemy_-_podklady_k_prednasce.pdf")
 cesta_pdfka = Path(input("Přetáhněte sem pdf_soubor(tím se sem nahraje jeho cesta) a potvrďte Enterem:\n\t"))
 print("\nNyní prosím čekejte, pdf se nahrává a zpracovává.")
-pages = convert_from_path(cesta_pdfka, 600)
+pages = convert_from_path(cesta_pdfka, 400)
 
 testpage = pages[0]
 print("Nyní se zjišťuje rozložení slidů na strance.")
@@ -17,7 +17,6 @@ X0, Y0, sirka, vyska, pocet = OdhaleniHranic.Recognize(testpage)
 
 print(f"Jedna stránka obsahuje {pocet} slajdů.")
 
-(X0, Y0, X0 + sirka, Y0 + vyska)
 
 kombinace = []
 for x in X0:
@@ -34,9 +33,8 @@ for each_page in pages:
         # break
     # break
 
-
-im_blank = Image.open("./source/blank.jpg")
-out_pdfko = str(cesta_pdfka.absolute().parent) + "/" + cesta_pdfka.stem + "_slides.pdf"
+im_blank = Image.open("./Source/blank.jpg")
+out_pdfko = str(cesta_pdfka.absolute().parent) + "\\" + cesta_pdfka.stem + "_slides.pdf"
 im_blank.save(out_pdfko, "PDF" ,resolution=100.0, save_all=True, append_images=slidy)
 
 print(f"\nVe slozce původniho PDF byl vytvoren soubor se slidy.\nPozor! Nové PDF obsahuje bílé stránky!!!\n\nCesta nového souboru je:\n\t{out_pdfko}\n\nKonec programu")
