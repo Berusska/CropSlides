@@ -25,5 +25,5 @@ echo """                                                                        
 echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 echo. 
-python  C:\Users\Admin\Desktop\CropMasteikova\Source\CropSlides.py  
+python  C:\Users\karas\Desktop\CropMasteikova\Source\CropSlides.py  
 exit 0 

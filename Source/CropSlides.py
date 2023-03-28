@@ -5,40 +5,29 @@ import os
 import OdhaleniHranic
 
 #nahrani pdfka
-# cesta_pdfka = Path('./a.pdf')
+# cesta_pdfka = Path('../../a.pdf')
 # cesta_pdfka = Path("C:\Users\Admin\Desktop\CropMasteikova\Ocni_terapeuticke_systemy_-_podklady_k_prednasce.pdf")
 cesta_pdfka = Path(input("Přetáhněte sem pdf_soubor(tím se sem nahraje jeho cesta) a potvrďte Enterem:\n\t"))
 print("\nNyní prosím čekejte, pdf se nahrává a zpracovává.")
 pages = convert_from_path(cesta_pdfka, 600)
 
-#hranice
-leva = 317
-prava = 4200
-horni = 686
-dolni = 5890
+testpage = pages[0]
+print("Nyní se zjišťuje rozložení slidů na strance.")
+X0, Y0, sirka, vyska, pocet = OdhaleniHranic.Recognize(testpage)
 
-sinis =2169
-dext = 2353
+print(f"Jedna stránka obsahuje {pocet} slajdů.")
 
-first = 2074
-second = 2596
-third = 3978
-fourth =4504
+(X0, Y0, X0 + sirka, Y0 + vyska)
 
-#list slidu
-hranice = [
-    (leva, horni, sinis, first),
-    (dext, horni, prava, first),
-    (leva, second, sinis, third),
-    (dext, second, prava, third),
-    (leva, fourth, sinis, dolni),
-    (dext, fourth, prava, dolni)
-]
+kombinace = []
+for x in X0:
+    for y in Y0:
+        kombinace.append([x, y, x + sirka, y+vyska])
 
 print("PDF nahráno. Nyní se budou extrahovat slidy.")
 slidy = []
 for each_page in pages:
-    for rez in hranice:
+    for rez in kombinace:
         cropped_img = each_page.crop(rez).resize((1850,1308))
         # cropped_img.show()
         slidy.append(cropped_img)
