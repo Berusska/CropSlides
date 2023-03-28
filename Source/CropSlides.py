@@ -2,6 +2,7 @@ from PIL import Image
 from pdf2image import convert_from_path
 from pathlib import Path
 import os
+import OdhaleniHranic
 
 #nahrani pdfka
 # cesta_pdfka = Path('./a.pdf')
