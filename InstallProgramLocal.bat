@@ -86,8 +86,8 @@ set prikaz=%CestaPythonu% %CestaProgramu%
 
 echo echo off >RunProgram.bat
 echo cls >>RunProgram.bat
-echo color 2
-echo echo ..
+echo color 2    >>RunProgram.bat
+echo echo ..    >>RunProgram.bat
 echo echo.    >>RunProgram.bat
 echo echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" >> RunProgram.bat
 echo echo """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" >> RunProgram.bat
@@ -115,6 +115,8 @@ echo echo """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 echo echo. >>RunProgram.bat
 echo %prikaz% >> RunProgram.bat 
 ::Nebo lze také ::echo|set /p=%CestaPythonu% %CestaProgramu% > RunProgram.bat 
+echo echo K zavreni prikazove radky stisknete enter  >> RunProgram.bat
+echo pause > nul  >> RunProgram.bat
 echo exit 0 >> RunProgram.bat
 
 timeout 2 > nul
